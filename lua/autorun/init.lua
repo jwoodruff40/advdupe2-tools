@@ -1,1 +1,1 @@
-include("init/commands.lua")
+include("commands.lua")
