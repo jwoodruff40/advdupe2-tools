@@ -14,6 +14,12 @@ Based on upstream work of Advanced Duplicator 2 at https://github.com/wiremod/ad
 
 `ad2t_encode` has two additional optional arguments, a new name for the dupe and whether to save the new dupe into the advdupe2 folder or not, with default values of the same name as the passed file and false. True/False cannot be passed unless a new name is also passed.
 
-`ad2t_encode "<name of dupe without .txt extension" "<new name of dupe>"` or `ad2t_encode "<name of dupe without .txt extension" "<new name of dupe>" true`
+`ad2t_encode "<name of dupe without .txt extension" "<new name of dupe>"` 
+
+or 
+
+`ad2t_encode "<name of dupe without .txt extension" "<new name of dupe>" true`
+
+---
 
 This process is intended to allow one to decode a dupe, manually make changes to it (say, change a model to another similar model, then reload the changed file into with the normal AD2 stool.
