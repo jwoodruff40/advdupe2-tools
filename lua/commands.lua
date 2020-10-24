@@ -17,8 +17,6 @@ concommand.Add("ad2t_decode", function(ply,cmd,args)
 end)
 
 concommand.Add("ad2t_encode", function(ply,cmd,args)
-	AdvDupe2.Encode(util.JSONToTable(file.Read("ad2t/"..args[1].."data.txt")),util.JSONToTable(file.Read("ad2t/"..args[1].."info.txt")),function(data)
-		AdvDupe2.SendToClient(ply,data,0)
-        end)
+	file.Write("ad2t/"..args[1]..".txt",AdvDupe2.ovEncode(util.JSONToTable(file.Read("ad2t/"..args[1].."data.txt")),util.JSONToTable(file.Read("ad2t/"..args[1].."info.txt"))))
 end)
 
