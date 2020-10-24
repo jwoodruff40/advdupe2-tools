@@ -4,11 +4,11 @@ function ReadTable(dupe)
 end
 
 concommand.Add("ad2t_print", function(ply,cmd,args)
-	PrintTable(ReadTable(args[1]))
+	PrintTable(ReadTable("advdupe2/"..args[1]..".txt"))
 end)
 
 concommand.Add("ad2t_decode", function(ply,cmd,args)
-	file.Write("ad2t/"..args[1], PrintTable(ReadTable(args[1])))
+	file.Write("ad2t/"..args[1]..".txt", ReadTable("advdupe2/"..args[1]..".txt"))
 end)
 
 --[[
