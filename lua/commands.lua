@@ -4,7 +4,7 @@ function ReadTable(dupe)
 end
 
 concommand.Add("ad2t_print", function(ply,cmd,args)
-	PrintTable(ReadTable(args[1])
+	PrintTable(ReadTable(args[1]))
 end)
 
 concommand.Add("ad2t_decode", function(ply,cmd,args)
