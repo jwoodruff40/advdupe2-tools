@@ -19,8 +19,8 @@ end)
 concommand.Add("ad2t_encode", function(ply,cmd,args)
 	args[2] =args[2] or args[1]
 	args[3] =args[3] or false
-	base_dir =(args[3]) and "advdupe2/" or "ad2t/"
-
+	base_dir =tobool(args[3]) and "advdupe2/" or "ad2t/"
+	
 	file.Write(base_dir..args[2]..".txt",AdvDupe2.ovEncode(util.JSONToTable(file.Read("ad2t/"..args[1].."data.txt")),util.JSONToTable(file.Read("ad2t/"..args[1].."info.txt"))))
 end)
 
