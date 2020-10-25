@@ -12,8 +12,8 @@ end)
 concommand.Add("ad2t_decode", function(ply,cmd,args)
 	local s, t, i = ReadTable("advdupe2/"..args[1]..".txt")
 	CheckDir("ad2t/"..args[1])
-	file.Write("ad2t/"..args[1].."info.txt", util.TableToJSON(i), true)
-	file.Write("ad2t/"..args[1].."data.txt", util.TableToJSON(t), true)
+	file.Write("ad2t/"..args[1].."info.txt", util.TableToJSON(i,true))
+	file.Write("ad2t/"..args[1].."data.txt", util.TableToJSON(t,true))
 end)
 
 concommand.Add("ad2t_encode", function(ply,cmd,args)
@@ -23,4 +23,3 @@ concommand.Add("ad2t_encode", function(ply,cmd,args)
 	
 	AdvDupe2.Encode(util.JSONToTable(file.Read("ad2t/"..args[1].."data.txt")),util.JSONToTable(file.Read("ad2t/"..args[1].."info.txt")),function(encString) file.Write(base_dir..args[2]..".txt",encString) end)
 end)
-
