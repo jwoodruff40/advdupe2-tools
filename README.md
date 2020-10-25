@@ -1,3 +1,5 @@
+# AdvDupe2-Tools
+
 Console commands to view, decode, and reencode (after changing) Advanced Duplicator 2 save files.
 
 Based on upstream work of Advanced Duplicator 2 at https://github.com/wiremod/advdupe2
