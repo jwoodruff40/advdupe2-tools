@@ -26,11 +26,11 @@ concommand.Add("ad2t_encode", function(ply,cmd,args)
 	args[2] = args[2] or args[1]
 	args[3] = args[3] or false
 	local base_dir =tobool(args[3]) and "advdupe2/" or "ad2t/"
-	local rt = util.JSONToTable(file.Read(base_dir..args[1]..".txt"))
+	local rt = util.JSONToTable(file.Read("ad2t/"..args[1]..".txt"))
 	
 	AdvDupe2.Encode(rt.data,rt.info, function(encString) 
-		file.Write("advdupe2/"..args[2]..".txt",encString) 
+		file.Write(base_dir..args[2]..".txt",encString) 
 	end)
 
-	print("saved to "..args[1])
+	print("saved to "..base_dir..args[2])
 end)
