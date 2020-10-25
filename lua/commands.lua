@@ -34,4 +34,3 @@ concommand.Add("ad2t_encode", function(ply,cmd,args)
 
 	print("saved to "..args[1])
 end)
-
