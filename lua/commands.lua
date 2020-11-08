@@ -22,7 +22,7 @@ concommand.Add("ad2t_decode", function(ply,cmd,args)
 	local wt = {info = i, data = t}
 
 	mkDirs("ad2t/"..args[1])
-	file.Write("ad2t/"..args[1]..".txt", util.TableToJSON(wt, true))
+	file.Write("ad2t/"..args[1]..".json", util.TableToJSON(wt, true))
 
 	print("outputted to garrysmod/data/"..folder)
 end)
@@ -31,7 +31,7 @@ concommand.Add("ad2t_encode", function(ply,cmd,args)
 	args[2] = args[2] or args[1]
 	args[3] = args[3] or false
 	local base_dir =tobool(args[3]) and "advdupe2/" or "ad2t/"
-	local rt = util.JSONToTable(file.Read("ad2t/"..args[1]..".txt"))
+	local rt = util.JSONToTable(file.Read("ad2t/"..args[1]..".json"))
 	
 	AdvDupe2.Encode(rt.data,rt.info, function(encString)
 		mkDirs(base_dir..args[2])
