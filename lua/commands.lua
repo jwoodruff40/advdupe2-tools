@@ -24,7 +24,7 @@ concommand.Add("ad2t_decode", function(ply,cmd,args)
 	mkDirs("ad2t/"..args[1])
 	file.Write("ad2t/"..args[1]..".json", util.TableToJSON(wt, true))
 
-	print("outputted to garrysmod/data/"..folder)
+	print("outputted to garrysmod/data/ad2t/"..args[1])
 end)
 
 concommand.Add("ad2t_encode", function(ply,cmd,args)
