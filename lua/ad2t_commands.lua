@@ -1,5 +1,3 @@
-include "filesys.lua"
-
 function ReadTable(dupe)
 	return AdvDupe2.Decode(file.Read(dupe))
 end
